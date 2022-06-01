@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Overseer {
 
+	//These private instance variables are used to store data within the class, such as options for selection, as well as String, int, and boolean values.
 	private String[] options = {"Low Cost", "Medium Cost", "High Cost"};
 	private String[] options2 = {"Yes", "No"};
 	private boolean[] available;
