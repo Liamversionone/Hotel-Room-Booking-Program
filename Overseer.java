@@ -23,6 +23,8 @@ public class Overseer {
 	private int type;
 	private int type2;
 	
+	/*This constructor is what is used to run all of the helper methods for the program. It executes code that creates windows for the user to interact with.
+	  The windows allow the user to select what kind of room they want to book, what dates they want to book them, and how much they will cost.*/
 	public Overseer() {
 		JOptionPane.showMessageDialog(null, "Welcome to TotallyTrivago!");
 		type = JOptionPane.showOptionDialog(null, "Choose which type of room you would like to book:", "Room selector", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
@@ -195,6 +197,8 @@ public class Overseer {
 	
 	}
 	
+	/*This method sets the dates String instance variable to a String that displays all of the related dates of the month. This is found by using the number of
+	  values within the selected room type's array of values.*/
 	private void map(int x) {
 		dates = "";
 		if(x == 0) {
@@ -226,6 +230,8 @@ public class Overseer {
 		}
 	}
 	
+	/*This method sets the dates String instance variable to a String that displays all of the related dates of the month. This is found by using the number of
+	  values within the selected room type's array of values. It also sets the dates that have been booked to false, showing that they can no longer be booked.*/
 	private void map(int x, int y, int z) {
 		dates = "";
 		if(x == 0) {
@@ -262,6 +268,7 @@ public class Overseer {
 		}
 	}
 	
+	//This method checks to see if the rooms selected are available.
 	private boolean check(int x, int y) {
 		for(int i = x - 1; i < y; i++) {
 			if(!available[i]) {
